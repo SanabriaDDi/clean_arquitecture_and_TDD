@@ -36,7 +36,7 @@ void main() {
   group('getConcreteNumberTrivia', () {
     const tNumber = 1;
     final tNumberTriviaModel =
-    NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
+        NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
 
     test('''should perform a GET request in a URL with number 
         beign the endpoint and with application/json header''', () async {
@@ -46,11 +46,10 @@ void main() {
       dataSource.getConcreteNumberTrivia(tNumber);
       // assert
       verify(
-            () =>
-            mockHttpClient.get(
-              Uri.http('numbersapi.com', '$tNumber'),
-              headers: {'Content-Type': 'application/json'},
-            ),
+        () => mockHttpClient.get(
+          Uri.http('numbersapi.com', '$tNumber'),
+          headers: {'Content-Type': 'application/json'},
+        ),
       );
     });
 
@@ -76,7 +75,7 @@ void main() {
 
   group('getRandomNumberTrivia', () {
     final tNumberTriviaModel =
-    NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
+        NumberTriviaModel.fromJson(json.decode(fixture('trivia.json')));
 
     test('''should perform a GET request in a URL with number 
         beign the endpoint and with application/json header''', () async {
@@ -86,11 +85,10 @@ void main() {
       dataSource.getRandomNumberTrivia();
       // assert
       verify(
-            () =>
-            mockHttpClient.get(
-              Uri.http('numbersapi.com', 'random'),
-              headers: {'Content-Type': 'application/json'},
-            ),
+        () => mockHttpClient.get(
+          Uri.http('numbersapi.com', 'random'),
+          headers: {'Content-Type': 'application/json'},
+        ),
       );
     });
 
