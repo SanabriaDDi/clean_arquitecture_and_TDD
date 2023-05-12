@@ -59,12 +59,12 @@ Future<List<RepositoryProvider>> buildProviders() async {
     ),
 
     //Use cases
-    RepositoryProvider<UseCase>(
+    RepositoryProvider<GetConcreteNumberTrivia>(
       create: (context) => GetConcreteNumberTrivia(
         context.read(),
       ),
     ),
-    RepositoryProvider<UseCase>(
+    RepositoryProvider<GetRandomNumberTrivia>(
       create: (context) => GetRandomNumberTrivia(
         context.read(),
       ),
