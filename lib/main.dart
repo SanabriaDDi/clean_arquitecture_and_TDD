@@ -22,10 +22,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Number trivia',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-            primary: Colors.green.shade800,
-            secondary: Colors.green.shade600,
-          ),
+          useMaterial3: true,
+          colorSchemeSeed: Colors.lightGreen
         ),
         home: const NumberTriviaPage(),
       ),
