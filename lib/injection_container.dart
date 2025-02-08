@@ -26,7 +26,7 @@ Future<List<RepositoryProvider>> buildProviders() async {
       create: (_) => http.Client(),
     ),
     RepositoryProvider<InternetConnectionChecker>(
-      create: (_) => InternetConnectionChecker(),
+      create: (_) => InternetConnectionChecker.instance,
     ),
 
     //Core

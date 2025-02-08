@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sanabria.clean.arquitecture.clean_arquitecture_and_tdd">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <application
         android:label="clean_arquitecture_and_tdd"
         android:name="${applicationName}"
