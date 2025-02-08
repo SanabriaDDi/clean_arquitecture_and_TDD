@@ -1,4 +1,3 @@
-import 'package:bloc_test/bloc_test.dart';
 import 'package:clean_arquitecture_and_tdd/core/error/failures.dart';
 import 'package:clean_arquitecture_and_tdd/core/usecases/usecase.dart';
 import 'package:clean_arquitecture_and_tdd/core/util/input_converter.dart';

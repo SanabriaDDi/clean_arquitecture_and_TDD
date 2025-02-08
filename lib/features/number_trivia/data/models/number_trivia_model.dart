@@ -1,8 +1,7 @@
 import 'package:clean_arquitecture_and_tdd/features/number_trivia/domain/entities/number_trivia.dart';
 
 class NumberTriviaModel extends NumberTrivia {
-  const NumberTriviaModel({required String text, required int number})
-      : super(text: text, number: number);
+  const NumberTriviaModel({required super.text, required super.number});
 
   factory NumberTriviaModel.fromJson(Map<String, dynamic> json) =>
       NumberTriviaModel(
