@@ -71,13 +71,12 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   }
 
   String _mapFailureToMessage(Failure failure) {
-    switch (failure.runtimeType) {
-      case ServerFailure:
-        return serverFailureMessage;
-      case CacheFailure:
-        return cacheFailureMessage;
-      default:
-        return 'Unexpected error';
+    if (failure is ServerFailure) {
+      return serverFailureMessage;
+    } else if (failure is CacheFailure) {
+      return cacheFailureMessage;
+    } else {
+      return failure.runtimeType.toString();
     }
   }
 }
